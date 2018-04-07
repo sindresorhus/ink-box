@@ -15,17 +15,16 @@ $ npm install ink-box
 ## Usage
 
 ```js
-const {h, render, Text} = require('ink');
-const Box = require('ink-box');
+import {h, render, Color} from 'ink';
+import Box from 'ink-box';
 
 render(
 	<div>
 		<Box borderStyle="round" borderColor="cyan" float="center" padding={1}>
-			I Love <Text magenta>Unicorns</Text>
+			I Love <Color magenta>Unicorns</Color>
 		</Box>
 	</div>
 );
-//=>
 ```
 
 
@@ -40,6 +39,7 @@ Props are passed as options to [`boxen`](https://github.com/sindresorhus/boxen#o
 
 - [ink-gradient](https://github.com/sindresorhus/ink-gradient) - Gradient color component for Ink
 - [ink-link](https://github.com/sindresorhus/ink-link) - Link component for Ink
+- [ink-big-text](https://github.com/sindresorhus/ink-big-text) - Awesome text component for Ink
 
 
 ## License
