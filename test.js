@@ -1,5 +1,5 @@
 import {serial as test} from 'ava';
-import {h, renderToString, Text} from 'ink';
+import {h, renderToString, Color} from 'ink';
 import clearModule from 'clear-module';
 import stripAnsi from 'strip-ansi';
 
@@ -11,7 +11,7 @@ test('render', t => {
 
 	const actual = renderToString(
 		<Box borderStyle="round" borderColor="cyan" padding={1}>
-			I Love <Text magenta>Unicorns</Text>
+			I Love <Color magenta>Unicorns</Color>
 		</Box>
 	);
 	console.log(actual);
