@@ -1,11 +1,13 @@
-import {h, renderToString} from 'ink';
+import React from 'react';
+import {Box as InkBox} from 'ink';
 import PropTypes from 'prop-types';
 import boxen from 'boxen';
 
-const Box = props => {
-	const text = renderToString(<span>{props.children}</span>);
-	return <span>{boxen(text, props)}</span>;
-};
+const Box = props => (
+	<InkBox unstable__transformChildren={text => boxen(text, props)}>
+		{props.children}
+	</InkBox>
+);
 
 Box.propTypes = {
 	children: PropTypes.any.isRequired,
