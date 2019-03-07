@@ -1,6 +1,6 @@
 {
 	"name": "ink-box",
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"description": "Styled box component for Ink",
 	"license": "MIT",
 	"repository": "sindresorhus/ink-box",
