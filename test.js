@@ -1,5 +1,7 @@
+import React from 'react';
 import {serial as test} from 'ava';
-import {h, renderToString, Color} from 'ink';
+import {Color} from 'ink';
+import {render} from 'ink-testing-library';
 import clearModule from 'clear-module';
 import stripAnsi from 'strip-ansi';
 
@@ -9,13 +11,13 @@ test('render', t => {
 	clearModule('.');
 	const Box = require('.');
 
-	const actual = renderToString(
+	const {lastFrame} = render(
 		<Box borderStyle="round" borderColor="cyan" padding={1}>
 			I Love <Color magenta>Unicorns</Color>
 		</Box>
 	);
-	console.log(actual);
-	t.snapshot(stripAnsi(actual));
+	console.log(lastFrame());
+	t.snapshot(stripAnsi(lastFrame()));
 
 	delete process.env.FORCE_COLOR;
 });
