@@ -10,15 +10,18 @@ const Box = props => (
 );
 
 Box.propTypes = {
-	children: PropTypes.any.isRequired,
+	children: PropTypes.oneOfType([
+		PropTypes.arrayOf(PropTypes.node),
+		PropTypes.node
+	]).isRequired,
 	borderColor: PropTypes.string,
 	borderStyle: PropTypes.oneOfType([
 		PropTypes.oneOf([
 			'single',
 			'double',
 			'round',
-			'single-double',
-			'double-single',
+			'singleDouble',
+			'doubleSingle',
 			'classic'
 		]),
 		PropTypes.shape({

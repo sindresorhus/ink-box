@@ -1,5 +1,5 @@
-import React from 'react';
 import {serial as test} from 'ava';
+import React from 'react';
 import {Color} from 'ink';
 import {render} from 'ink-testing-library';
 import clearModule from 'clear-module';
