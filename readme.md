@@ -1,4 +1,4 @@
-# ink-box [![Build Status](https://travis-ci.org/sindresorhus/ink-box.svg?branch=master)](https://travis-ci.org/sindresorhus/ink-box)
+# ink-box
 
 > Styled box component for [Ink](https://github.com/vadimdemedes/ink)
 
